@@ -74,6 +74,13 @@ Try the public demo at [stockkit.net](https://stockkit.net):
 - Get an AI-generated research preview before subscribing
 - Subscribe to receive complete daily reports by email
 
+Shareable public report pages are available at:
+
+- [stockkit.net/reports/NVDA](https://stockkit.net/reports/NVDA)
+- [stockkit.net/reports/AAPL](https://stockkit.net/reports/AAPL)
+- [stockkit.net/reports/600519](https://stockkit.net/reports/600519)
+- [stockkit.net/reports/HK00700](https://stockkit.net/reports/HK00700)
+
 ## How to Subscribe
 
 1. Visit [stockkit.net](https://stockkit.net)
@@ -110,6 +117,12 @@ curl https://stockkit.net/api/levels?symbol=AAPL&market=US
 curl -X POST https://stockkit.net/api/analyze \
   -H "Content-Type: application/json" \
   -d '{"symbol":"NVDA"}'
+```
+
+Or use GET for public report pages and lightweight integrations:
+
+```bash
+curl "https://stockkit.net/api/analyze?symbol=NVDA"
 ```
 
 ### Get Market Signal

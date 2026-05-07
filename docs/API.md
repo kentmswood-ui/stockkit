@@ -9,15 +9,20 @@ https://stockkit.net/api
 
 ## Endpoints
 
-### POST /api/analyze
+### GET/POST /api/analyze
 Generate an AI stock research preview.
+
+**GET Example:**
+```bash
+curl "https://stockkit.net/api/analyze?symbol=NVDA"
+```
 
 **Body:**
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | symbol | string | Yes | Stock ticker (e.g., NVDA, 600519, HK00700) |
 
-**Example:**
+**POST Example:**
 ```bash
 curl -X POST "https://stockkit.net/api/analyze" \
   -H "Content-Type: application/json" \
@@ -30,6 +35,18 @@ curl -X POST "https://stockkit.net/api/analyze" \
 - Latest MA/MACD/RSI/Bollinger indicators
 - AI-generated research analysis
 - Timestamp
+
+### Public Report Pages
+Shareable report pages are available under:
+
+```
+https://stockkit.net/reports/{SYMBOL}
+```
+
+Examples:
+- `https://stockkit.net/reports/NVDA`
+- `https://stockkit.net/reports/600519`
+- `https://stockkit.net/reports/HK00700`
 
 ### GET /api/quote
 Get real-time stock quote.

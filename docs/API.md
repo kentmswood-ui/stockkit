@@ -44,9 +44,12 @@ https://stockkit.net/reports/{SYMBOL}
 ```
 
 Examples:
+- `https://stockkit.net/reports`
 - `https://stockkit.net/reports/NVDA`
 - `https://stockkit.net/reports/600519`
 - `https://stockkit.net/reports/HK00700`
+
+These pages are server-rendered and include structured metadata for search and social sharing.
 
 ### GET /api/quote
 Get real-time stock quote.

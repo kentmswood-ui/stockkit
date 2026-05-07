@@ -76,10 +76,13 @@ Try the public demo at [stockkit.net](https://stockkit.net):
 
 Shareable public report pages are available at:
 
+- [stockkit.net/reports](https://stockkit.net/reports)
 - [stockkit.net/reports/NVDA](https://stockkit.net/reports/NVDA)
 - [stockkit.net/reports/AAPL](https://stockkit.net/reports/AAPL)
 - [stockkit.net/reports/600519](https://stockkit.net/reports/600519)
 - [stockkit.net/reports/HK00700](https://stockkit.net/reports/HK00700)
+
+Public report pages are server-rendered for search engines and include structured metadata for sharing.
 
 ## How to Subscribe
 

@@ -9,6 +9,28 @@ https://stockkit.net/api
 
 ## Endpoints
 
+### POST /api/analyze
+Generate an AI stock research preview.
+
+**Body:**
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| symbol | string | Yes | Stock ticker (e.g., NVDA, 600519, HK00700) |
+
+**Example:**
+```bash
+curl -X POST "https://stockkit.net/api/analyze" \
+  -H "Content-Type: application/json" \
+  -d '{"symbol":"NVDA"}'
+```
+
+**Response includes:**
+- Quote snapshot
+- Strategy score and signal
+- Latest MA/MACD/RSI/Bollinger indicators
+- AI-generated research analysis
+- Timestamp
+
 ### GET /api/quote
 Get real-time stock quote.
 
@@ -35,8 +57,9 @@ Get support and resistance levels.
 **Response includes:**
 - Pivot Points (R1, R2, S1, S2)
 - Fibonacci Retracement levels
-- EMA clusters
+- EMA reference levels
 - 30-day high/low range
+- Market and as-of timestamp
 
 ### GET /api/macro
 Get macroeconomic indicators.

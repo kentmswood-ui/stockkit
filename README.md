@@ -10,6 +10,8 @@
 
 StockKit is a free AI-powered stock research platform that delivers institutional-grade analysis reports directly to your email. No account registration needed — just subscribe with your email and start receiving daily reports.
 
+StockKit also provides an instant research demo on the homepage: enter a US, China A-share, or Hong Kong ticker and get a live AI analysis preview backed by quotes, technical indicators, strategy scores, and news context.
+
 ### Supported Markets
 - 🇺🇸 **US Stocks** — NYSE, NASDAQ, S&P 500, Dow Jones, Nasdaq 100
 - 🇨🇳 **China A-Shares** — SSE, SZSE, ChiNext, STAR Market, BSE
@@ -63,6 +65,15 @@ Each report includes:
 5. **⚡ Trading Plan** — Entry/stop-loss/target with risk-reward ratios
 6. **⚠️ Risk Matrix** — Probability, impact, triggers, response strategies
 
+## Live Research Demo
+
+Try the public demo at [stockkit.net](https://stockkit.net):
+
+- Enter `NVDA`, `AAPL`, `600519`, or `HK00700`
+- Review real-time quote data, strategy score, MA/RSI/Bollinger readings
+- Get an AI-generated research preview before subscribing
+- Subscribe to receive complete daily reports by email
+
 ## How to Subscribe
 
 1. Visit [stockkit.net](https://stockkit.net)
@@ -92,6 +103,13 @@ curl https://stockkit.net/api/quote?symbol=NVDA&market=US
 ### Get Technical Levels
 ```bash
 curl https://stockkit.net/api/levels?symbol=AAPL&market=US
+```
+
+### Generate AI Analysis
+```bash
+curl -X POST https://stockkit.net/api/analyze \
+  -H "Content-Type: application/json" \
+  -d '{"symbol":"NVDA"}'
 ```
 
 ### Get Market Signal
